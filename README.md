@@ -1,11 +1,10 @@
 ## Jeff Geiser
 
-Building the personal AI layer at [Noorth Labs](https://noorth.ai) —
-sovereign inference infrastructure and the runtime that runs on top of it.
+VP Customer Engineering at [Zenlayer](https://zenlayer.com) · building in public at the intersection
+of enterprise AI and sovereign inference.
 
 I work on the layer between model weights and production agent deployments —
-the inference stack, the runtime, the governance. The part most teams
-skip until it breaks.
+the inference stack, the runtime, the governance.
 
 ---
 
