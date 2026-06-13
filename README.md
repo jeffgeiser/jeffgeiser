@@ -16,6 +16,7 @@ the inference stack, the runtime, the memory, the governance. That's what gets b
 | **[Wicklee](https://wicklee.dev)** | Single-binary observability for self-hosted inference (Ollama, vLLM, llama.cpp). Tracks tok/W, WES score, thermal state, and routing signals across multi-node setups. Community tier free. |
 | **[hiipo](https://hiipo.io)** | A local proxy that gives your models persistent memory, enforced standards, and a full audit trail. One command. Nothing leaves your machine. |
 | **[ARP](https://github.com/jeffgeiser/arp-spec)** | The Agentic Resource Protocol — how agents negotiate with the infrastructure they run on. Sense → Score → Commit → Reconcile. Spec + essay; reference implementation in Wicklee. |
+| **[arp-agent](https://github.com/jeffgeiser/arp-agent)** | Reference implementation of the ARP routing protocol. Polls Wicklee health endpoints, scores nodes on thermal/VRAM/tok-W signals, routes OpenAI-compatible requests to the best available node. |
 | **[compass-md](https://github.com/jeffgeiser/compass-md)** | Open spec for portable AI context — the files that tell any AI tool who you are, how you work, and what you care about. MIT. |
 | **[elm-research](https://github.com/jeffgeiser/elm-research)** | Open methodology for small expert models — specialized, private, runs on your infrastructure. Current run: a fine-tuned 7B for enterprise account intelligence, evaluated honestly against a frontier baseline. |
 | **[compass-dash](https://github.com/jeffgeiser/compass-dash)** | Local dashboard for reviewing compass-md refinements — accept, reject, and apply agent-proposed context changes without leaving your machine. |
@@ -31,6 +32,8 @@ I think you can decide on data.
 
 Tokens per watt — I authored **WES**, an efficiency score for inference
 (throughput per watt, with a thermal penalty), because speed is visible and watts aren't.
+
+Silicon-state routing — existing inference routers see KV-cache and queue depth. They don't see junction temperature, thermal headroom, or tok/W efficiency delta. That's the gap ARP and Wicklee close — and the dataset I'm building to validate it.
 
 The context portability problem — why agents lose who you are between sessions,
 and what a real fix looks like.
