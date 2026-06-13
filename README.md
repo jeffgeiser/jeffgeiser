@@ -15,7 +15,7 @@ the inference stack, the runtime, the memory, the governance. That's what gets b
 |---|---|
 | **[Wicklee](https://wicklee.dev)** | Single-binary observability for self-hosted inference (Ollama, vLLM, llama.cpp). Tracks tok/W, WES score, thermal state, and routing signals across multi-node setups. Community tier free. |
 | **[hiipo](https://hiipo.io)** | A local proxy that gives your models persistent memory, enforced standards, and a full audit trail. One command. Nothing leaves your machine. |
-| **[ARP](https://github.com/jeffgeiser/agentic-resource-protocol)** | The Agentic Resource Protocol — how agents negotiate with the infrastructure they run on. Sense → Score → Commit → Reconcile. Spec + essay; reference implementation in Wicklee. |
+| **[ARP](https://github.com/jeffgeiser/arp-spec)** | The Agentic Resource Protocol — how agents negotiate with the infrastructure they run on. Sense → Score → Commit → Reconcile. Spec + essay; reference implementation in Wicklee. |
 | **[compass-md](https://github.com/jeffgeiser/compass-md)** | Open spec for portable AI context — the files that tell any AI tool who you are, how you work, and what you care about. MIT. |
 | **[elm-research](https://github.com/jeffgeiser/elm-research)** | Open methodology for small expert models — specialized, private, runs on your infrastructure. Current run: a fine-tuned 7B for enterprise account intelligence, evaluated honestly against a frontier baseline. |
 | **[compass-dash](https://github.com/jeffgeiser/compass-dash)** | Local dashboard for reviewing compass-md refinements — accept, reject, and apply agent-proposed context changes without leaving your machine. |
