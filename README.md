@@ -1,46 +1,18 @@
-## Jeff Geiser
+### Jeff Geiser
 
-VP Customer Engineering at [Zenlayer](https://zenlayer.com) · I work on where AI runs —
-multi-MW GPU clusters, edge inference, and model gateways by day; open tooling for
-AI on hardware you own at Noorth Labs, nights and weekends.
+VP, Customer Engineering at [Zenlayer](https://zenlayer.com). I work on where AI actually runs: multi-megawatt GPU clusters, edge inference, and the operator layer underneath it.
 
-The interesting problems live in the layer between model weights and production —
-the inference stack, the runtime, the memory, the governance. That's what gets built here.
+The interesting problem right now isn't the models. It's running them on hardware you own, efficiently, and proving the data stayed home. Most enterprise inference is moving on-prem, and the layer that measures a sovereign stack, routes across it, and proves it held is mostly unbuilt. That's what I build (under Noorth Labs).
 
----
+**Building**
 
-### Active projects
+- **[Wicklee](https://wicklee.dev)** — observability and cost governance for self-hosted inference. Watts and tokens in one datastore, so you get real cost per token and tokens-per-watt across a fleet. The MPG for local AI.
+- **[bordercheck](https://github.com/jeffgeiser/bordercheck)** — a test harness that checks whether data in your AI stack actually stays inside the border you drew. Runs a canary through the real stack, stresses it, and inspects every layer data lands in (logs, caches, vector stores, egress). Residency proven by behavior, not by diagram.
+- **hiipo** — the proof layer for sovereign AI. You moved AI in-house for sovereignty and compliance; hiipo proves you got it. bordercheck is its first tool.
+- Small expert models — judges and signal producers built to run on owned hardware as components in compound-AI pipelines.
 
-| | |
-|---|---|
-| **[Wicklee](https://wicklee.dev)** | Single-binary observability for self-hosted inference (Ollama, vLLM, llama.cpp). Tracks tok/W, WES score, thermal state, and routing signals across multi-node setups. Community tier free. |
-| **[hiipo](https://hiipo.io)** | A local proxy that gives your models persistent memory, enforced standards, and a full audit trail. One command. Nothing leaves your machine. |
-| **[ARP](https://github.com/jeffgeiser/arp-spec)** | The Agentic Resource Protocol — how agents negotiate with the infrastructure they run on. Sense → Score → Commit → Reconcile. Spec + essay; reference implementation in Wicklee. |
-| **[arp-agent](https://github.com/jeffgeiser/arp-agent)** | Reference implementation of the ARP routing protocol. Polls Wicklee health endpoints, scores nodes on thermal/VRAM/tok-W signals, routes OpenAI-compatible requests to the best available node. |
-| **[compass-md](https://github.com/jeffgeiser/compass-md)** | Open spec for portable AI context — the files that tell any AI tool who you are, how you work, and what you care about. MIT. |
-| **[elm-research](https://github.com/jeffgeiser/elm-research)** | Open methodology for small expert models — specialized, private, runs on your infrastructure. Current run: a fine-tuned 7B for enterprise account intelligence, evaluated honestly against a frontier baseline. |
-| **[compass-dash](https://github.com/jeffgeiser/compass-dash)** | Local dashboard for reviewing compass-md refinements — accept, reject, and apply agent-proposed context changes without leaving your machine. |
-| **[Taarn](https://taarn.ai)** | Personal AI OS — local-first, runs on your hardware. Coming later; Wicklee and hiipo first. |
+**Writing**
 
----
+I write about the operator layer of sovereign AI at [jeffgeiser.dev](https://jeffgeiser.dev): compound AI on hardware you own, routing on silicon state, tokens-per-watt, and proving your stack stayed sovereign.
 
-### What I'm thinking about
-
-The placement question — frontier API, GPU cluster, edge region, your own hardware,
-or a small expert model trained for the job? Most teams decide on instinct;
-I think you can decide on data.
-
-Tokens per watt — I authored **WES**, an efficiency score for inference
-(throughput per watt, with a thermal penalty), because speed is visible and watts aren't.
-
-Silicon-state routing — existing inference routers see KV-cache and queue depth. They don't see junction temperature, thermal headroom, or tok/W efficiency delta. That's the gap ARP and Wicklee close — and the dataset I'm building to validate it.
-
-The context portability problem — why agents lose who you are between sessions,
-and what a real fix looks like.
-
----
-
-### Writing
-
-**[The Inference Layer](https://jeffgeiser.substack.com)** — notes on running AI
-on infrastructure you own: benchmarks, runtime architecture, honest failures.
+The throughline: measure it, route it, prove it stayed home. The operator layer for AI you run yourself.
