@@ -10,6 +10,7 @@ The interesting problem right now isn't the models. It's running them on hardwar
 - **[bordercheck](https://github.com/jeffgeiser/bordercheck)** — a test harness that checks whether data in your AI stack actually stays inside the border you drew. Runs a canary through the real stack, stresses it, and inspects every layer data lands in (logs, caches, vector stores, egress). Residency proven by behavior, not by diagram.
 - **hiipo** — the proof layer for sovereign AI. You moved AI in-house for sovereignty and compliance; hiipo proves you got it. bordercheck is its first tool.
 - Small expert models — judges and signal producers built to run on owned hardware as components in compound-AI pipelines.
+- - **[ARP](https://github.com/jeffgeiser/arp-spec)** — the Agentic Resource Protocol. Sense, Score, Commit, Reconcile: how an agent reasons about inference compute it controls. More a named pattern than a standard I'm pushing, but the vocabulary holds up and it's the spine of the decision-loop writing.
 
 **Writing**
 
